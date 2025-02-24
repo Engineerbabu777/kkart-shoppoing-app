@@ -15,6 +15,10 @@
 		7699B88040F8A987B510C191 /* libPods-KKart-KKartTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-KKart-KKartTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		838C6A621DC98695E995C08D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		A16B0F7C45DF452582BDFF8E /* Tinos-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AAF26C8D2A7440F8B45BFCE /* Tinos-Bold.ttf */; };
+		AC5773CA19BB474B9B6C87E4 /* CormorantGaramond-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71546FE4AE07452199B7C1D6 /* CormorantGaramond-Medium.ttf */; };
+		E526FC75C42F49F993CAABAD /* Tinos-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA100D269DA24456B41D8810 /* Tinos-Regular.ttf */; };
+		FB1CC0C6D4E540A5A34DAF9B /* CormorantGaramond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 996FD13745C7402F96386BA7 /* CormorantGaramond-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +47,13 @@
 		5709B34CF0A7D63546082F79 /* Pods-KKart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKart.release.xcconfig"; path = "Target Support Files/Pods-KKart/Pods-KKart.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-KKart-KKartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKart-KKartTests.debug.xcconfig"; path = "Target Support Files/Pods-KKart-KKartTests/Pods-KKart-KKartTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-KKart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KKart.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AAF26C8D2A7440F8B45BFCE /* Tinos-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Tinos-Bold.ttf"; path = "../src/assets/fonts/Tinos-Bold.ttf"; sourceTree = "<group>"; };
+		71546FE4AE07452199B7C1D6 /* CormorantGaramond-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CormorantGaramond-Medium.ttf"; path = "../src/assets/fonts/CormorantGaramond-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = KKart/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-KKart-KKartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKart-KKartTests.release.xcconfig"; path = "Target Support Files/Pods-KKart-KKartTests/Pods-KKart-KKartTests.release.xcconfig"; sourceTree = "<group>"; };
+		996FD13745C7402F96386BA7 /* CormorantGaramond-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CormorantGaramond-Regular.ttf"; path = "../src/assets/fonts/CormorantGaramond-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FA100D269DA24456B41D8810 /* Tinos-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Tinos-Regular.ttf"; path = "../src/assets/fonts/Tinos-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				B91832FAB928447CAB230D6A /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,6 +147,18 @@
 				00E356EE1AD99517003FC87E /* KKartTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B91832FAB928447CAB230D6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71546FE4AE07452199B7C1D6 /* CormorantGaramond-Medium.ttf */,
+				996FD13745C7402F96386BA7 /* CormorantGaramond-Regular.ttf */,
+				6AAF26C8D2A7440F8B45BFCE /* Tinos-Bold.ttf */,
+				FA100D269DA24456B41D8810 /* Tinos-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -247,6 +268,10 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				838C6A621DC98695E995C08D /* PrivacyInfo.xcprivacy in Resources */,
+				AC5773CA19BB474B9B6C87E4 /* CormorantGaramond-Medium.ttf in Resources */,
+				FB1CC0C6D4E540A5A34DAF9B /* CormorantGaramond-Regular.ttf in Resources */,
+				A16B0F7C45DF452582BDFF8E /* Tinos-Bold.ttf in Resources */,
+				E526FC75C42F49F993CAABAD /* Tinos-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
