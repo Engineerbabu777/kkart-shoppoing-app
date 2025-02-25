@@ -32,6 +32,7 @@ export async function resetAndNavigate(routeName: string) {
   }
 }
 
+
 export async function goBack() {
   navigationRef.isReady();
   if (navigationRef.isReady()) {

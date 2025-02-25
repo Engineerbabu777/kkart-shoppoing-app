@@ -5,12 +5,13 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Splash from '@modules/onboard';
 import Home from '@modules/home';
+import { navigationRef } from './NavigationUtil';
 
 const Stack = createNativeStackNavigator();
 
 export default function Navigation() {
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
