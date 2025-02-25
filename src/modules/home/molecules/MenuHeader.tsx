@@ -28,7 +28,9 @@ export default function MenuHeader({scrollY}: MenuHeaderProps) {
             key={index}
             item={item}
             isFocused={focusedIndex === index}
-            onSelect={() => {setFocusedIndex(index)}}
+            onSelect={() => {
+              setFocusedIndex(index);
+            }}
           />
         ))}
       </View>
@@ -45,5 +47,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: 5,
+    gap: 5,
   },
 });
