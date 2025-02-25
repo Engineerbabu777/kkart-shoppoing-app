@@ -1819,6 +1819,27 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - RNVectorIcons (10.2.0):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - SocketRocket (0.7.1)
   - ViroKit (1.0):
     - React
@@ -1899,6 +1920,7 @@ DEPENDENCIES:
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - "ViroKit (from `../node_modules/@reactvision/react-viro/ios/dist/ViroRenderer/`)"
   - "ViroReact (from `../node_modules/@reactvision/react-viro/ios/`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -2051,6 +2073,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-screens"
   RNSVG:
     :path: "../node_modules/react-native-svg"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
   ViroKit:
     :path: "../node_modules/@reactvision/react-viro/ios/dist/ViroRenderer/"
   ViroReact:
@@ -2131,6 +2155,7 @@ SPEC CHECKSUMS:
   RNReanimated: a2692304a6568bc656c04c8ffea812887d37436e
   RNScreens: 5ce6f195932b40b8f386e31e811a677415c52250
   RNSVG: bbbdd17e8730c0f2a9cb416e5f37be87e29ebc90
+  RNVectorIcons: a24016b773380b1aa37fca501ec6b94a951890a0
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   ViroKit: 728e2547f4ac693a69fa7652813ec178a361dbd6
   ViroReact: 0fe7ad200cee750209ef1e767f677a90f4736bf0

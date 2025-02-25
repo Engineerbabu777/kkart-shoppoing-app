@@ -5,12 +5,12 @@
 import {AppRegistry, Text, TextInput} from 'react-native';
 import App from './src/App';
 import {name as appName} from './app.json';
-import {
-  configureReanimatedLogLevel,
-  ReanimatedLevel,
-} from 'react-native-reanimated';
+// import {
+//   configureReanimatedLogLevel,
+//   ReanimatedLevel,
+// } from 'react-native-reanimated';
 
-configureReanimatedLogLevel({level: ReanimatedLevel.warn, strict: false});
+// configureReanimatedLogLevel({level: ReanimatedLevel.warn, strict: false});
 if (Text.defaultProps) {
   Text.defaultProps.allowFontScaling = false;
 } else {
