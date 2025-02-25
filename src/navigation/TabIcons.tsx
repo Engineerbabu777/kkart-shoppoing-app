@@ -57,7 +57,7 @@ export const CartIcon: React.FC<TabIconProps> = ({color, focused, size}) => {
         name={focused ? 'cart' : 'cart-outline'}
         size={size}
         color={color}
-        iconFamily="MaterialCommunityIcons"
+        iconFamily="Ionicons"
       />
     </>
   );
