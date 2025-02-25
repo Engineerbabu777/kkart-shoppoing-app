@@ -1,0 +1,1 @@
+export const GET_HOME_SCREEN = 'GET_HOME_SCREEN';
