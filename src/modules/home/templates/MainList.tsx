@@ -11,9 +11,11 @@ import {
 import React, {useRef, useState} from 'react';
 import {dynamicDashboardData as fullData} from '@utils/db';
 import AdCarousal from '../organisms/AdCarousel';
+import Categories from '../organisms/Categories';
 
 const sectionComponents: {[key: string]: React.ComponentType<any>} = {
-    ad_carousal: AdCarousal,
+  ad_carousal: AdCarousal,
+  categories: Categories,
 };
 
 const PAGE_SIZE = 4;
@@ -65,7 +67,7 @@ export default function MainList({scrollYGlobal}: Props) {
   };
 
   const renderItem = ({item}: any) => {
-    console.log({item})
+    console.log({item});
     const SectionComponent = sectionComponents[item.type];
     return SectionComponent ? <SectionComponent data={item?.data} /> : null;
   };

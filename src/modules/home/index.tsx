@@ -45,10 +45,10 @@ const Home = () => {
           <SearchBar />
         </View>
       </Animated.View>
-      <Animated.View
-        style={[moveUpStyle, {height: screenHeight}]}>
-          <MainList scrollYGlobal={scrollYGlobal}/>
-        </Animated.View>
+
+      <Animated.View style={[moveUpStyle, {height: screenHeight}]}>
+        <MainList scrollYGlobal={scrollYGlobal} />
+      </Animated.View>
     </View>
   );
 };
