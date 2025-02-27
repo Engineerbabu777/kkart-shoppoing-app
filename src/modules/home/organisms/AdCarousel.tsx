@@ -1,10 +1,21 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
+import {screenHeight, screenWidth} from '@utils/Constants';
+import FlipSlip from '../molecules/FlipSlip';
 
-export default function AdCarousel() {
+type Props = {
+  data: any;
+};
+export default function AdCarousel({data}: Props) {
+  const [active, setActive] = useState(0);
+  const baseOptions = {
+    vertical: false,
+    width: screenWidth,
+    height: screenHeight * 0.8,
+  };
   return (
     <View>
-      <Text>AdCarousel</Text>
+        <FlipSlip />
     </View>
   );
 }
