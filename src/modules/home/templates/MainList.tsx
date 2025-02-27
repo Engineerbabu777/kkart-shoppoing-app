@@ -67,7 +67,7 @@ export default function MainList({scrollYGlobal}: Props) {
   const renderItem = ({item}: any) => {
     console.log({item})
     const SectionComponent = sectionComponents[item.type];
-    return SectionComponent ? <SectionComponent data={item} /> : null;
+    return SectionComponent ? <SectionComponent data={item?.data} /> : null;
   };
 
   return (
