@@ -1,8 +1,9 @@
-import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {Image, Pressable, StyleSheet, View} from 'react-native';
 import React, {useState} from 'react';
 import {screenHeight, screenWidth} from '@utils/Constants';
 import FlipSlip from '../molecules/FlipSlip';
 import Carousel from 'react-native-reanimated-carousel';
+import Dots from '../atoms/Dots';
 
 type Props = {
   data: any;
@@ -12,7 +13,7 @@ export default function AdCarousel({data}: Props) {
   const baseOptions = {
     vertical: false,
     width: screenWidth,
-    height: screenHeight * 0.8,
+    height: screenHeight * 0.3,
   };
   return (
     <View>
@@ -36,7 +37,7 @@ export default function AdCarousel({data}: Props) {
       {active != null && (
         <View style={styles.dots}>
           {data?.map((item: any, index: number) => {
-            return <View></View>;
+            return <Dots active={active} index={index} key={index} />;
           })}
         </View>
       )}
@@ -47,7 +48,7 @@ export default function AdCarousel({data}: Props) {
 const styles = StyleSheet.create({
   imageContainer: {
     width: '100%',
-    height: '40%',
+    height: '100%',
   },
   dots: {
     flexDirection: 'row',
@@ -59,6 +60,7 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: '100%',
+
     resizeMode: 'cover',
   },
 });
