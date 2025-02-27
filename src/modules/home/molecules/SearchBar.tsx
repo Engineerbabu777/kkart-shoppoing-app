@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   toggleContainer: {
-    width: '16%',
+    width: '13%',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
     width: '80%',
     backgroundColor: '#fafafa',
     borderWidth: 2,
+    borderColor: '#ccc',
     paddingHorizontal: 10,
   },
 });
