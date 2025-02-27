@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 12,
     backgroundColor: '#f0f0f0',
-    
   },
   isFocused: {
     backgroundColor: 'black',
@@ -67,5 +66,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: RFValue(10),
     fontStyle: 'italic',
+    fontFamily:'serif',
   },
 });

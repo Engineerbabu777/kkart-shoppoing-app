@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React, {useState} from 'react';
 import Animated, {interpolate, useAnimatedStyle} from 'react-native-reanimated';
 import {SafeAreaView} from 'react-native-safe-area-context';
