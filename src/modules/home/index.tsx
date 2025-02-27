@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Animated, {
@@ -10,6 +10,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import {screenHeight} from '@utils/Constants';
 import MenuHeader from './molecules/MenuHeader';
+import SearchBar from './molecules/SearchBar';
 
 const Home = () => {
   const insets = useSafeAreaInsets();
@@ -39,7 +40,8 @@ const Home = () => {
 
       <Animated.View style={[moveUpStyle]}>
         <View style={{}}>
-          <MenuHeader scrollY={scrollYGlobal}/>
+          <MenuHeader scrollY={scrollYGlobal} />
+          <SearchBar />
         </View>
       </Animated.View>
       <Animated.View
