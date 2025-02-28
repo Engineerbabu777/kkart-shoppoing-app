@@ -46,7 +46,7 @@ const Home = () => {
         </View>
       </Animated.View>
 
-      <Animated.View style={[moveUpStyle, {height: screenHeight}]}>
+      <Animated.View style={[moveUpStyle, {flex:1}]}>
         <MainList scrollYGlobal={scrollYGlobal} />
       </Animated.View>
     </View>

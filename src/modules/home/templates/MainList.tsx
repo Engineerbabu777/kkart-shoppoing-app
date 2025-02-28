@@ -12,10 +12,14 @@ import React, {useRef, useState} from 'react';
 import {dynamicDashboardData as fullData} from '@utils/db';
 import AdCarousal from '../organisms/AdCarousel';
 import Categories from '../organisms/Categories';
+import Sponser from '../organisms/Sponser';
+import VerticalList from '../organisms/VerticalList';
 
 const sectionComponents: {[key: string]: React.ComponentType<any>} = {
   ad_carousal: AdCarousal,
   categories: Categories,
+  sponser: Sponser,
+  vertical_list: VerticalList,
 };
 
 const PAGE_SIZE = 4;
