@@ -8,10 +8,10 @@ import Animated, {
   interpolate,
   Extrapolation,
 } from 'react-native-reanimated';
-import {screenHeight} from '@utils/Constants';
 import MenuHeader from './molecules/MenuHeader';
 import SearchBar from './molecules/SearchBar';
 import MainList from './templates/MainList';
+import { screenHeight } from '@utils/Constants';
 
 const Home = () => {
   const insets = useSafeAreaInsets();
@@ -46,7 +46,7 @@ const Home = () => {
         </View>
       </Animated.View>
 
-      <Animated.View style={[moveUpStyle, {flex:1}]}>
+      <Animated.View style={[moveUpStyle, {height:screenHeight}]}>
         <MainList scrollYGlobal={scrollYGlobal} />
       </Animated.View>
     </View>

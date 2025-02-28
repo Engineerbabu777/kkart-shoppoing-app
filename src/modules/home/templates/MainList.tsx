@@ -14,12 +14,16 @@ import AdCarousal from '../organisms/AdCarousel';
 import Categories from '../organisms/Categories';
 import Sponser from '../organisms/Sponser';
 import VerticalList from '../organisms/VerticalList';
+import HorizontalList from '../organisms/HorizontalList';
+import AnimatedHorizontalList from '../organisms/AnimatedHorizontalList';
 
 const sectionComponents: {[key: string]: React.ComponentType<any>} = {
   ad_carousal: AdCarousal,
   categories: Categories,
   sponser: Sponser,
   vertical_list: VerticalList,
+  horizontal_list: HorizontalList,
+  animated_horizontal_list: AnimatedHorizontalList,
 };
 
 const PAGE_SIZE = 4;
@@ -75,7 +79,13 @@ export default function MainList({scrollYGlobal}: Props) {
     const SectionComponent = sectionComponents[item.type];
     return SectionComponent ? (
       <SectionComponent
-        data={item.type === 'vertical_list' ? item : item?.data}
+        data={
+          item.type === 'vertical_list'
+            ? item
+            : item.type === 'horizontal_list'
+            ? item
+            : item?.data
+        }
       />
     ) : null;
   };

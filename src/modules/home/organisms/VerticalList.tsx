@@ -6,7 +6,6 @@ import Icon from '@components/atoms/Icon';
 import {navigate} from '@navigation/NavigationUtil';
 
 export default function VerticalList({data}: {data: any}) {
-  console.log({data22: data});
   return (
     <View style={styles.container}>
       <View style={[styles.absoluteView, {backgroundColor: data?.bgColor}]} />
