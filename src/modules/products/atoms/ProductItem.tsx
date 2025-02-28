@@ -4,6 +4,7 @@ import React from 'react';
 import {navigate} from '@navigation/NavigationUtil';
 import Icon from '@components/atoms/Icon';
 import {RFValue} from 'react-native-responsive-fontsize';
+import UniversalAdd from './UniversalAdd';
 
 type Props = {
   isOdd: boolean;
@@ -51,6 +52,7 @@ const ProductItem = ({isOdd, item}: Props) => {
           <View style={styles.hotDealContainer}>
             <Text style={styles.hotDealText}>Hot Deal</Text>
           </View>
+          <UniversalAdd item={item}/>
         </View>
       </View>
     </View>

@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/self-closing-comp */
 import Icon from '@components/atoms/Icon';
-import {goBack} from '@navigation/NavigationUtil';
+import { navigate} from '@navigation/NavigationUtil';
 import React from 'react';
 import {Pressable, StyleSheet, Text, TextInput, View} from 'react-native';
 
@@ -12,7 +12,7 @@ type Props = {
 export default function SearchBar({cartLength}: Props) {
   return (
     <View style={styles.container}>
-      <Pressable onPress={goBack}>
+      <Pressable onPress={() => navigate('Categories')}>
         <Icon name="arrowleft" iconFamily="AntDesign" color="#000" size={24} />
       </Pressable>
 

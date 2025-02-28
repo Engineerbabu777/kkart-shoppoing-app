@@ -8,11 +8,14 @@ import Cart from '@modules/cart';
 import Categories from '@modules/categories';
 import Account from '@modules/account';
 import {AccountIcon, CartIcon, CategoriesIcon, HomeIcon} from './TabIcons';
+import {useAppSelector} from '@store/reduxHook';
+import {selectTotalItemsInCart} from '@modules/cart/api/slice';
 
 const Tab = createBottomTabNavigator();
 export default function MainNavigator() {
+  
+  const count = useAppSelector(selectTotalItemsInCart);
 
-    const count = 2;
   return (
     <Tab.Navigator
       screenOptions={{
@@ -59,7 +62,7 @@ export default function MainNavigator() {
             <CartIcon focused={focused} size={size} color={color} />
           ),
           tabBarBadge: count > 0 ? count : undefined,
-          tabBarBadgeStyle: {backgroundColor: 'red', height:16,width:16},
+          tabBarBadgeStyle: {backgroundColor: 'red', height: 16, width: 16},
         }}
       />
     </Tab.Navigator>

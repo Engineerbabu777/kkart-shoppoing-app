@@ -32,10 +32,18 @@ export async function resetAndNavigate(routeName: string) {
   }
 }
 
+// export async function goBack() {
+//   console.log("Logging backE")
+//   if (!navigationRef.isReady()) return;
 
-export async function goBack() {
-  navigationRef.isReady();
-  if (navigationRef.isReady()) {
+//   if (navigationRef.canGoBack()) {
+//     navigationRef.dispatch(CommonActions.goBack());
+//   } else {
+//     console.warn('Cannot go back: No previous screen in the stack.');
+//   }
+// }
+export const goBack = () => {
+  if (navigationRef) {
     navigationRef.dispatch(CommonActions.goBack());
   }
-}
+};

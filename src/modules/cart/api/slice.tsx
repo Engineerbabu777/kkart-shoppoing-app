@@ -56,12 +56,11 @@ export const cartSlice = createSlice({
 
 export const {clearCart, addItem, removeItem} = cartSlice.actions;
 export const selectCartItems = (state: RootState) => state.cart.items;
-export const selectItemCountById = (id: string) => {
+export const selectItemCountById = (id: string) =>
   createSelector(selectCartItems, items => {
     const item = items.find((i: any) => i?._id === id);
     return item ? item?.quantity : 0;
   });
-};
 
 export const selectTotalItemsInCart = createSelector(selectCartItems, items => {
   return items.reduce((acc, item) => acc + item.quantity, 0);
