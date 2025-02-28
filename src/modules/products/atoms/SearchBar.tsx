@@ -14,16 +14,11 @@ export default function SearchBar({cartLength}: Props) {
   return (
     <View style={styles.container}>
       <Pressable onPress={goBack}>
-        <Icon
-          name="arrow-left"
-          iconFamily="MaterialCommunityIcons"
-          color="#000"
-          size={24}
-        />
+        <Icon name="arrowleft" iconFamily="AntDesign" color="#000" size={24} />
       </Pressable>
 
       <View style={styles.searchContainer}>
-        <Icon name="Search" size={20} iconFamily="MaterialIcons" color="#000" />
+        <Icon name="search" size={20} iconFamily="Ionicons" color="#000" />
         <TextInput
           style={styles.searchInput}
           placeholder="Search Products"
@@ -37,9 +32,7 @@ export default function SearchBar({cartLength}: Props) {
         {cartLength > 0 && (
           <>
             <View style={styles.badge}>
-              <Text style={styles.badgeText}>
-                {cartLength}
-              </Text>
+              <Text style={styles.badgeText}>{cartLength}</Text>
             </View>
           </>
         )}
