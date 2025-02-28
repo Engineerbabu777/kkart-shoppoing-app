@@ -4,7 +4,6 @@ import Icon from '@components/atoms/Icon';
 import {goBack} from '@navigation/NavigationUtil';
 import React from 'react';
 import {Pressable, StyleSheet, Text, TextInput, View} from 'react-native';
-import {RFValue} from 'react-native-responsive-fontsize';
 
 type Props = {
   cartLength: number;
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
   },
   badgeText: {
     color: '#fff',
-    fontSize: RFValue(12),
+    fontSize: 12,
     fontWeight: 'bold',
   },
 });

@@ -5,6 +5,7 @@ import {getProductsByCategory} from './api/getProducts';
 import {screenHeight} from '@utils/Constants';
 import {RFValue} from 'react-native-responsive-fontsize';
 import SearchBar from './atoms/SearchBar';
+import ProductItem from './atoms/ProductItem';
 
 export default function ProductList() {
   const route = useRoute();
@@ -24,15 +25,32 @@ export default function ProductList() {
     fetchProducts();
   }, []);
 
+  const renderItem = ({item,index}: any) => {
+    const isOdd = index % 2 !== 0;
+    return <ProductItem item={item} isOdd={isOdd} />;
+  };
+
   return (
     <View style={styles.container}>
       <SafeAreaView />
 
-      <SearchBar />
+      <SearchBar cartLength={2} />
 
-      {/* <FlatList 
-      
-      /> */}
+      <FlatList
+        bounces={false}
+        data={products}
+        renderItem={renderItem}
+        keyExtractor={item => item._id.toString()}
+        numColumns={2}
+        ListEmptyComponent={
+          <View style={styles.emptyContainer}>
+            <Text style={styles.emptyText}>
+              Ops! No products found in this category.
+            </Text>
+          </View>
+        }
+        contentContainerStyle={styles.listContainer}
+      />
     </View>
   );
 }
