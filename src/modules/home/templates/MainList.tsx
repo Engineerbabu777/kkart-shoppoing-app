@@ -84,7 +84,7 @@ export default function MainList({scrollYGlobal}: Props) {
             ? item
             : item.type === 'horizontal_list'
             ? item
-            : item?.data
+            : item.type === 'animated_horizontal_list' ? item : item?.data
         }
       />
     ) : null;
