@@ -1,7 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/self-closing-comp */
 import Icon from '@components/atoms/Icon';
-import { navigate} from '@navigation/NavigationUtil';
+import {goBack, navigate} from '@navigation/NavigationUtil';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {Pressable, StyleSheet, Text, TextInput, View} from 'react-native';
 
@@ -10,9 +11,14 @@ type Props = {
 };
 
 export default function SearchBar({cartLength}: Props) {
+  const navigation = useNavigation<any>();
+
   return (
     <View style={styles.container}>
-      <Pressable onPress={() => navigate('Categories')}>
+      <Pressable
+        onPress={() =>
+          navigation.navigate('MainNavigator', {screen: 'Categories'})
+        }>
         <Icon name="arrowleft" iconFamily="AntDesign" color="#000" size={24} />
       </Pressable>
 
@@ -26,7 +32,10 @@ export default function SearchBar({cartLength}: Props) {
       </View>
 
       <Icon name="heart-outline" iconFamily="Ionicons" color="#000" size={24} />
-      <Pressable>
+      <Pressable
+        onPress={() => {
+          navigation.navigate('MainNavigator', {screen: 'Cart'});
+        }}>
         <Icon name="cart-sharp" iconFamily="Ionicons" color="#000" size={24} />
         {cartLength > 0 && (
           <>
