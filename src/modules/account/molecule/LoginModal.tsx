@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {
   Alert,
   Keyboard,
@@ -19,6 +20,7 @@ import {navigate} from '@navigation/NavigationUtil';
 import {clearCart} from '@modules/cart/api/slice';
 import {modalStyles} from '@styles/modalStyles';
 import Icon from '@components/atoms/Icon';
+import {Colors} from '@utils/Constants';
 
 type Props = {
   visible: boolean;
@@ -28,11 +30,11 @@ type Props = {
 const LoginModal = ({onClose, visible}: Props) => {
   const dispatch = useAppDispatch();
   const user = useAppSelector(state => state.account.user);
-  const [number, setNumber] = useState('');
-  const [address, setAddress] = useState('');
+  const [number, setNumber] = useState<string | number>('');
+  const [address, setAddress] = useState<string>('');
 
   const handleLogin = async () => {
-    const data = await loginOrSignUp(number, address);
+    const data = await loginOrSignUp(number as string, address);
 
     if (data) {
       dispatch(setData(data));
@@ -110,7 +112,31 @@ const LoginModal = ({onClose, visible}: Props) => {
                   placeholderTextColor={'#ccc'}
                 />
 
-                <View style={modalStyles.buttonContainer}></View>
+                <View style={modalStyles.buttonContainer}>
+                  <TouchableOpacity
+                    style={modalStyles.button}
+                    onPress={handleLogin}>
+                    <Text>{!user ? 'Login' : 'Save'}</Text>
+                  </TouchableOpacity>
+
+                  {user && (
+                    <TouchableOpacity
+                      onPress={handleLogout}
+                      style={[
+                        modalStyles.button,
+                        {
+                          backgroundColor: 'transparent',
+                          borderColor: Colors.active,
+                          borderWidth: 1,
+                        },
+                      ]}>
+                      <Text
+                        style={[modalStyles.button, {color: Colors.active}]}>
+                        Logout
+                      </Text>
+                    </TouchableOpacity>
+                  )}
+                </View>
               </View>
             </ScrollView>
           </KeyboardAvoidingView>
