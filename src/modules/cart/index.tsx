@@ -11,6 +11,7 @@ import PlaceOrderButton from './atoms/PlaceOrderButton';
 
 export default function Cart() {
   const carts = useAppSelector(selectCartItems);
+  const user = useAppSelector(state => state.account.user) as any;
 
   const renderItem = ({item}: any) => <OrderItem item={item} />;
 
@@ -18,9 +19,9 @@ export default function Cart() {
     <CustomSafeAreaView>
       <View style={styles.container}>
         <Text style={styles.heading}>My Cart</Text>
-        <Text style={styles.number}>🗺️</Text>
+        <Text style={styles.number}>{user?.phone || '🗺️'}</Text>
         <Text style={styles.address}>
-          Deliver to: Login first to place your orders
+          Deliver to: {user?.address || 'Login first to place your orders'}
         </Text>
       </View>
 

@@ -116,7 +116,7 @@ const LoginModal = ({onClose, visible}: Props) => {
                   <TouchableOpacity
                     style={modalStyles.button}
                     onPress={handleLogin}>
-                    <Text>{!user ? 'Login' : 'Save'}</Text>
+                    <Text style={modalStyles.buttonText}>{!user ? 'Login' : 'Save'}</Text>
                   </TouchableOpacity>
 
                   {user && (

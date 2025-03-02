@@ -13,6 +13,7 @@ import React, {useState} from 'react';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {useAppSelector} from '@store/reduxHook';
 import {selectTotalPriceInCart} from '../api/slice';
+import LoginModal from '@modules/account/molecule/LoginModal';
 
 type Props = {};
 
@@ -50,6 +51,10 @@ const PlaceOrderButton = ({}: Props) => {
           )}
         </TouchableOpacity>
       </View>
+
+      {visible && (
+        <LoginModal onClose={() => setVisible(false)} visible={visible} />
+      )}
     </>
   );
 };
