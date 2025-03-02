@@ -12,15 +12,26 @@ import {
 import React, {useState} from 'react';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {useAppSelector} from '@store/reduxHook';
-import {selectTotalPriceInCart} from '../api/slice';
+import {selectCartItems, selectTotalPriceInCart} from '../api/slice';
 import LoginModal from '@modules/account/molecule/LoginModal';
 
 type Props = {};
 
 const PlaceOrderButton = ({}: Props) => {
+  const user = useAppSelector(state => state.account.user);
+  const carts = useAppSelector(selectCartItems);
+
   const price = useAppSelector(selectTotalPriceInCart);
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
+
+  const handlePlaceOrder = async() => {
+     setLoading(true);
+     const data = await createTransaction(price,user?._id);
+     if(data){
+      const order = 
+     }
+  };
 
   return (
     <>
@@ -41,7 +52,11 @@ const PlaceOrderButton = ({}: Props) => {
         <TouchableOpacity
           disabled={loading}
           onPress={() => {
-            setVisible(true);
+            if (user) {
+              handlePlaceOrder();
+            } else {
+              setVisible(true);
+            }
           }}
           style={styles.button}>
           {loading ? (
