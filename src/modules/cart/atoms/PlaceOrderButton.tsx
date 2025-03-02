@@ -8,12 +8,14 @@ import {
   Platform,
   TouchableOpacity,
   ActivityIndicator,
+  Alert,
 } from 'react-native';
 import React, {useState} from 'react';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {useAppSelector} from '@store/reduxHook';
 import {selectCartItems, selectTotalPriceInCart} from '../api/slice';
 import LoginModal from '@modules/account/molecule/LoginModal';
+import { createOrder, createTransaction } from '../api/PayGateway';
 
 type Props = {};
 
@@ -26,10 +28,15 @@ const PlaceOrderButton = ({}: Props) => {
   const [visible, setVisible] = useState(false);
 
   const handlePlaceOrder = async() => {
-     setLoading(true);
+    //  setLoading(true);
      const data = await createTransaction(price,user?._id);
      if(data){
-      const order = 
+      // const order = await createOrder(....data);
+      // if(order.type === "Error"){
+
+      // }
+     }else{
+      Alert.alert("Transaction not found - please try again later")
      }
   };
 
